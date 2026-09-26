@@ -28,7 +28,9 @@ This project was developed as part of my Artificial Intelligence Engineer intern
 - JavaScript
 - AI API
 - GitHub
-
+  
+Open the Project
+   [AI Code Reviewer - Live Demo](https://ai-code-reviewer-gcmj9kedj-aryansingh8107696744s-projects.vercel.app)  
 ## 📂 Project Structure
 
 ```text
@@ -48,7 +50,6 @@ AI-CODE-REVIEWER/
 5. The review and suggestions are displayed to the user.
 🚀 Getting Started
 
-1. Clone the Repository
+ Clone the Repository
    Git clone - https://github.com/aryan-singhdev/AI-CODE-REVIEWER.git
-2. Open the Project
-   [AI Code Reviewer - Live Demo](https://ai-code-reviewer-gcmj9kedj-aryansingh8107696744s-projects.vercel.app)  
+ 
