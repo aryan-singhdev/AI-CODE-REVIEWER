@@ -34,8 +34,7 @@ Open the Project
 ### 🔑 API Key
 
 An API key is required to run the AI review functionality locally.
-
-For security reasons, do not add your API key directly to the source code or upload it to GitHub.   
+   
 ## 📂 Project Structure
 
 ```text
