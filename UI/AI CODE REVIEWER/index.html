@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Reviewer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">&lt;/&gt;</span>
+            <span>AI Code Reviewer</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">About</a>
+        </div>
+
+        <a href="" class="github-btn">GitHub ↗️</a>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <div class="badge">
+                <span></span>
+                AI-Powered Code Analysis
+            </div>
+
+            <h1>
+                Write Better Code.<br>
+                <span>Build With Confidence.</span>
+            </h1>
+
+            <p>
+                Analyze your code with AI, detect bugs, improve code quality,
+                and get smart suggestions in seconds.
+            </p>
+
+            <a href="#review" class="hero-btn">
+                Start Reviewing →
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Feature Chain -->
+    <section class="feature-chain" id="features">
+
+        <div class="section-heading">
+            <p>WHAT IT DOES</p>
+            <h2>Everything your code needs</h2>
+        </div>
+
+        <div class="chain">
+
+            <div class="chain-card">
+                <div class="chain-icon">🐛</div>
+                <h3>Bug Detection</h3>
+                <p>Find errors and potential bugs in your code.</p>
+            </div>
+
+            <div class="chain-line">→</div>
+
+            <div class="chain-card">
+                <div class="chain-icon">⚡</div>
+                <h3>Code Quality</h3>
+                <p>Identify inefficient and poorly written code.</p>
+            </div>
+
+            <div class="chain-line">→</div>
+
+            <div class="chain-card">
+                <div class="chain-icon">🔒</div>
+                <h3>Security Check</h3>
+                <p>Detect common security vulnerabilities.</p>
+            </div>
+
+            <div class="chain-line">→</div>
+
+            <div class="chain-card">
+                <div class="chain-icon">💡</div>
+                <h3>Suggestions</h3>
+                <p>Get AI-generated improvements and fixes.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Code Reviewer -->
+    <section class="review-section" id="review">
+
+        <div class="section-heading">
+            <p>AI CODE REVIEWER</p>
+            <h2>Analyze Your Code</h2>
+        </div>
+
+
+        <div class="review-container">
+
+            <!-- Code Editor -->
+            <div class="editor-card">
+
+                <div class="card-header">
+                    <div>
+                        <span class="status-dot"></span>
+                        Code Editor
+                    </div>
+
+                    <select id="language">
+                        <option>Python</option>
+                        <option>JavaScript</option>
+                        <option>Java</option>
+                        <option>C++</option>
+                    </select>
+                </div>
+
+
+                <div class="editor">
+
+                    <div class="line-numbers">
+                        1<br>
+                        2<br>
+                        3<br>
+                        4<br>
+                        5<br>
+                        6<br>
+                        7<br>
+                        8
+                    </div>
+
+                    <textarea id="codeInput">def calculate_average(numbers):
+    total = 0
+
+    for number in numbers:
+        total += number
+
+    average = total / len(numbers)
+
+    return average</textarea>
+
+                </div>
+
+
+                <div class="editor-footer">
+                    <button class="clear-btn" onclick="clearCode()">
+                        Clear
+                    </button>
+
+                    <button class="review-btn" onclick="reviewCode()">
+                        Review Code →
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- AI Result -->
+            <div class="result-card">
+
+                <div class="result-header">
+                    <div>
+                        <span class="ai-dot"></span>
+                        AI Review
+                    </div>
+
+                    <span class="ready" id="reviewStatus">
+                        Ready
+                    </span>
+                </div>
+
+
+                <!-- Score -->
+                <div class="score-box">
+
+                    <div class="score-circle">
+                        <span id="score">--</span>
+                    </div>
+
+                    <div>
+                        <h3>Code Quality</h3>
+                        <p id="scoreText">
+                            Submit your code for analysis
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Results -->
+                <div class="result-items">
+
+                    <div class="result-item">
+                        <div class="result-title">
+                            <span class="result-icon bug">!</span>
+                            <strong>Bugs & Errors</strong>
+                        </div>
+
+                        <p id="bugResult">
+                            No analysis yet.
+                        </p>
+                    </div>
+
+
+                    <div class="result-item">
+                        <div class="result-title">
+                            <span class="result-icon quality">✓</span>
+                            <strong>Code Quality</strong>
+                        </div>
+
+                        <p id="qualityResult">
+                            Waiting for review.
+                        </p>
+                    </div>
+
+
+                    <div class="result-item">
+                        <div class="result-title">
+                            <span class="result-icon suggestion">✦</span>
+                            <strong>Suggestions</strong>
+                        </div>
+
+                        <p id="suggestionResult">
+                            AI suggestions will appear here.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Supported Languages -->
+    <section class="languages">
+
+        <div class="section-heading">
+            <p>SUPPORTED LANGUAGES</p>
+            <h2>Review code in your favorite language</h2>
+        </div>
+
+        <div class="language-grid">
+
+            <div class="language-card">
+                <span>🐍</span>
+                <h3>Python</h3>
+            </div>
+
+            <div class="language-card">
+                <span>JS</span>
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="language-card">
+                <span>☕</span>
+                <h3>Java</h3>
+            </div>
+
+            <div class="language-card">
+                <span>C++</span>
+                <h3>C++</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- How it works -->
+    <section class="how-it-works" id="how-it-works">
+
+        <div class="section-heading">
+            <p>SIMPLE WORKFLOW</p>
+            <h2>How It Works</h2>
+        </div>
+
+
+        <div class="workflow">
+
+            <div class="workflow-card">
+                <div class="number">01</div>
+                <h3>Paste Code</h3>
+                <p>Enter your code into the editor.</p>
+            </div>
+
+            <div class="workflow-arrow">→</div>
+
+            <div class="workflow-card">
+                <div class="number">02</div>
+                <h3>AI Analysis</h3>
+                <p>AI analyzes your code and detects issues.</p>
+            </div>
+
+            <div class="workflow-arrow">→</div>
+
+            <div class="workflow-card">
+                <div class="number">03</div>
+                <h3>Get Review</h3>
+                <p>Receive bugs, suggestions and improvements.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div>
+            <p class="small-title">ABOUT PROJECT</p>
+
+            <h2>
+                Your AI-powered
+                coding assistant.
+            </h2>
+
+            <p>
+                AI Code Reviewer helps developers understand their code,
+                identify problems and improve coding practices using
+                artificial intelligence.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <span>AI</span>
+            <h3>Smart Code Analysis</h3>
+            <p>
+                Fast and intelligent feedback for your code.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">
+            <span class="logo-icon">&lt;/&gt;</span>
+            AI Code Reviewer
+        </div>
+
+        <p>Built with HTML, CSS & JavaScript</p>
+
+        <p>© 2026 AI Code Reviewer</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
