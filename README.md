@@ -31,6 +31,11 @@ This project was developed as part of my Artificial Intelligence Engineer intern
   
 Open the Project
    [AI Code Reviewer - Live Demo](https://ai-code-reviewer-gcmj9kedj-aryansingh8107696744s-projects.vercel.app)  
+### 🔑 API Key
+
+An API key is required to run the AI review functionality locally.
+
+For security reasons, do not add your API key directly to the source code or upload it to GitHub.   
 ## 📂 Project Structure
 
 ```text
