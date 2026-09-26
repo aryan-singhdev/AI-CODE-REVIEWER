@@ -39,3 +39,16 @@ AI-CODE-REVIEWER/
     ├── index.html
     ├── script.js
     └── style.css
+⚙️ How It Works
+
+1. Enter or paste your source code into the code editor.
+2. Click the review button.
+3. The application sends the code for AI-powered analysis.
+4. The AI analyzes the submitted code.
+5. The review and suggestions are displayed to the user.
+🚀 Getting Started
+
+1. Clone the Repository
+   Git clone - https://github.com/aryan-singhdev/AI-CODE-REVIEWER.git
+2. Open the Project
+   LIVE LINK - 
